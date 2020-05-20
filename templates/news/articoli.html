@@ -4,7 +4,7 @@
     <div class="my-3"></div>
     {% for articoli in articoli_list %}
         <p>{{ forloop.counter }}){{ articoli.titolo }}
-              <br> {{ articoli.contenuto }} <h6>({{articoli.autore }})</h6>
+              <br> {{ articoli.contenuto }} ({{articoli.autore }})
         </p>
         
         {% endfor %}
