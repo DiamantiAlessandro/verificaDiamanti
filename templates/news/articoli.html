@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block contenuti %}
+    <h5 class="my-3"> Elenco articoli:</h5>
+    <div class="my-3"></div>
+    {% for articoli in articoli_list %}
+        <p>{{ forloop.counter }}){{ articoli.titolo }}
+              <br> {{ articoli.contenuto }} <h6>({{articoli.autore }})</h6>
+        </p>
+        
+        {% endfor %}
+{% endblock contenuti %}
