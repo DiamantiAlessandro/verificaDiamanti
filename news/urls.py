@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import ArticoliView,GiornalistiView
+from .views import ArticoliView,GiornalistiView, ArticoliGiornalistiView
 
 
 app_name = 'news'
@@ -9,5 +9,5 @@ urlpatterns = [
     
     path('lista-articoli', ArticoliView.as_view(), name='articoli'),
     path('lista-giornalisti', GiornalistiView.as_view(), name='giornalisti'),
-    path('lista-giornalisti/<int:pk>', ArticoliView, name='lista_articoli'),
+    path('lista-articoli/<int:pk>', ArticoliGiornalistiView, name='lista_articoli'),
 ]

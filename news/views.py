@@ -29,14 +29,12 @@ class GiornalistiView(ListView):
     template_name = "news/giornalisti.html"
 
 def ArticoliGiornalistiView(request, pk):
-    obj = get_object_or_404(Articoli, id=pk)
-    
-    context = {'post': post,
-                'comments': comments,
-                'new_comment': new_comment,
-                'comment_form': comment_form
+    giornalista = get_object_or_404(Giornalisti, id=pk)
+    articoli=giornalista.articoli.all()
+    context = {'giornalista': giornalista,
+                'articoli': articoli,
                 }
-    return render(request, 'blog/post_detail.html', context)
+    return render(request, 'news/articoli.html', context)
 
 
 
