@@ -1,1 +1,1 @@
-web: gunicorn "nome progetto".wsgi --log-file - 
+web: gunicorn "verificaDiamanti".wsgi --log-file - 
