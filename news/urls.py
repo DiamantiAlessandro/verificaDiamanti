@@ -9,5 +9,5 @@ urlpatterns = [
     
     path('lista-articoli', ArticoliView.as_view(), name='articoli'),
     path('lista-giornalisti', GiornalistiView.as_view(), name='giornalisti'),
-    path('lista-articoli/<int:pk>', ArticoliGiornalistiView, name='lista_articoli'),
+    path('lista-articoli/<int:pk>', ArticoliGiornalistiView, name='articoli'),
 ]
