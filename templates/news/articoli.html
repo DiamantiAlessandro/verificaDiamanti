@@ -6,7 +6,7 @@
     <h5  class="my-3" >Elenco di tutti gli articoli:</a></h5>
     {% endif %}
 <div class="my-3"></div>
-    {% for articoli in articoli %}
+    {% for articoli in articoli_list %}
         <p>{{ forloop.counter }}) <a>{{ articoli.titolo }}</a> <br>
             <a>{{articoli.contenuto}}</a>
             <small><a>({{ articoli.autore }})</a></small>
