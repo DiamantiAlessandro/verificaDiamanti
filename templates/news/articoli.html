@@ -4,7 +4,7 @@
     <h5  class="my-3" >Elenco degli articoli di {{ giornalisti.nome }}:</h5>
     {% else %}
     <h5  class="my-3" >Elenco di tutti gli articoli:</a></h5>
-{% endif %}
+    {% endif %}
 <div class="my-3"></div>
     {% for articoli in articoli_list %}
         <p>{{ forloop.counter }}) <a>{{ articoli.titolo }}</a> <br>

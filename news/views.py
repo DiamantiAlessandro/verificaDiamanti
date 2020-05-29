@@ -16,9 +16,9 @@ class ArticoliView(ListView):
     
     #recupera di dati da passare alla pagina per il render
     #def get_context_data(self, **kwargs):
-     #   context = super().get_context_data(**kwargs)
-      #  context["posts"] = BlogPostModel.objects.all()
-       # return context
+       # context = super().get_context_data(**kwargs)
+        #context["posts"] = BlogPostModel.objects.all()
+        #return context
 
 #class PostDetailView(DetailView):
 #    model = BlogPostModel #modello dei dati da utilizzare 
@@ -32,7 +32,7 @@ def ArticoliGiornalistiView(request, pk):
     giornalista = get_object_or_404(Giornalisti, id=pk)
     articoli=giornalista.articoli.all()
     context = {'giornalista': giornalista,
-                'articoli': articoli,
+                'articoli_list': articoli,
                 }
     return render(request, 'news/articoli.html', context)
 
